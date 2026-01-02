@@ -16,8 +16,9 @@
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 90%;
-        max-width: 1125px;
+        width: 100%; /* 占满整个屏幕宽度 */
+        max-width: 100%; /* 取消最大宽度限制 */
+        padding: 0 20px; /* 加一点左右内边距，避免内容贴边 */
     }
 
     .head-container {
@@ -241,7 +242,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: none; /* 移除原来的绿色渐变 */
+    background-color: transparent; /* 设置背景为透明 */
 }
 
 .text-color {
@@ -378,7 +380,7 @@ header .side-nav .social-link {
     padding: 0 35px;
     height: 45px;
     line-height: 45px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #fff;
     border: 1px solid #fff;
     background-color: transparent;
@@ -551,8 +553,7 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+        /* 删掉渐变动画 */
 }
 
 .bg-cover:before,
@@ -565,6 +566,7 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
+    background: transparent !important;
 }
 
 .bg-cover .container {
@@ -1830,7 +1832,14 @@ thead {
 
 /*尾部样式*/
 footer {
-    padding-bottom: 1px;
+    /* 用你想要的绿色（这里是之前的渐变绿，也可以换纯绿色） */
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background-color: #4cbf30 !important; /* 兜底纯绿色，确保不透明 */
+    opacity: 1 !important; /* 强制不透明（防止被其他样式影响） */
+    margin-bottom: 0 !important; /* 去掉底部多余外边距，消除间隙 */
+    padding: 15px 10px; /* 调整内边距，让内容更紧凑 */
+    border: none !important; /* 去掉可能的边框分隔线 */
+    width: 100%; /* 确保页脚宽度占满页面，避免两侧留白 */
 }
 
 footer .social-statis {
