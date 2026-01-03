@@ -121,6 +121,11 @@ pre {
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
+/* 隐藏代码块前“1”所在的框框（gutter单元格） */
+.highlight table .gutter {
+  display: none !important;
+}
+
 code {
     padding: 1px 5px;
     top: 13px !important;
